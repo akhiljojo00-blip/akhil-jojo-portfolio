@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="ivory">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Personal portfolio of Akhil Jojo, a BCA student at Jain University Kochi exploring Full Stack Development, AI, apps, games, digital products, and future startup ideas." />
+<meta name="theme-color" content="#f4f0e8" />
+<title>AKHIL JOJO • Full Stack AI Development</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-name">AKHIL JOJO</div>
+    <div class="loader-sub">BCA • FULL STACK AI DEVELOPMENT</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor cursor-ring" id="cursorRing" aria-hidden="true"><span class="cursor-label" id="cursorLabel"></span></div>
+
+<!-- ============ BACKGROUND CANVAS ============ -->
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav" id="nav">
+  <a class="nav-brand" href="#hero" data-cursor="HOME">AJ<span>.</span></a>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#hero" class="nav-link">HOME</a>
+    <a href="#about" class="nav-link">ABOUT</a>
+    <a href="#projects" class="nav-link">WORK</a>
+    <a href="#ideas" class="nav-link">IDEAS</a>
+    <a href="#process" class="nav-link">JOURNEY</a>
+    <a href="#collab" class="nav-link">CONTACT</a>
+  </div>
+
+  <div class="nav-actions">
+    <button class="theme-btn" id="themeBtn" data-cursor="THEMES" aria-label="Open theme switcher">
+      <span class="theme-dot"></span>
+      <span class="theme-name">IVORY</span>
+    </button>
+    <a class="nav-github" href="https://github.com" target="_blank" rel="noopener" data-cursor="OPEN">GITHUB ↗</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <div class="theme-panel" id="themePanel">
+    <p class="theme-panel-title">COLOR SYSTEM</p>
+    <div class="theme-grid">
+      <button class="theme-swatch" data-set="ivory" style="--s1:#f4f0e8;--s2:#a9794f"><span></span><em>Ivory / Graphite</em></button>
+      <button class="theme-swatch" data-set="charcoal" style="--s1:#1a1714;--s2:#c87a3f"><span></span><em>Charcoal / Copper</em></button>
+      <button class="theme-swatch" data-set="forest" style="--s1:#11201a;--s2:#9bbf4a"><span></span><em>Forest / Lime</em></button>
+      <button class="theme-swatch" data-set="burgundy" style="--s1:#2a141a;--s2:#d27a8f"><span></span><em>Burgundy / Rose</em></button>
+      <button class="theme-swatch" data-set="sand" style="--s1:#e8dcc8;--s2:#c06a43"><span></span><em>Sand / Terracotta</em></button>
+      <button class="theme-swatch" data-set="black" style="--s1:#0e0e10;--s2:#c8c8cc"><span></span><em>Black / Silver</em></button>
+      <button class="theme-swatch" data-set="sunset" style="--s1:#2e1f16;--s2:#c8662f"><span></span><em>Warm Sunset</em></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal">PORTFOLIO — VERSION 1</p>
+      <h1 class="hero-title">
+        <span class="line"><span>AKHIL</span></span>
+        <span class="line"><span>JOJO</span></span>
+      </h1>
+      <p class="hero-sub reveal">BCA STUDENT • FULL STACK AI DEVELOPMENT</p>
+      <p class="hero-statement reveal">I build ideas, experiments, websites, apps, and digital products while learning how technology can solve real problems.</p>
+      <p class="hero-loc reveal">KALADY • ERNAKULAM • KERALA</p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#projects" data-cursor="VIEW">EXPLORE MY WORK</a>
+        <a class="btn btn-ghost" href="#collab" data-cursor="BUILD">LET'S BUILD TOGETHER</a>
+      </div>
+    </div>
+    <div class="hero-scroll reveal" aria-hidden="true">
+      <span>SCROLL</span><i></i>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <p class="section-label reveal">01 — ABOUT</p>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="about-title reveal">BUILDING IDEAS INTO DIGITAL EXPERIENCES.</h2>
+          <p class="about-text reveal">I'm Akhil Jojo, a first-year BCA student specializing in Full Stack AI Development at Jain University Kochi. I enjoy solving problems through code, exploring emerging technologies, and turning ideas into practical websites, mobile applications, AI concepts, games, and digital products.</p>
+          <p class="about-position reveal">Student by status. Builder by mindset.</p>
+        </div>
+        <div class="about-right">
+          <div class="profile reveal" data-cursor="EXPLORE">
+            <span class="profile-name">AKHIL JOJO</span>
+            <span class="profile-sub">BCA • FULL STACK AI DEVELOPMENT</span>
+          </div>
+          <div class="profile reveal" data-cursor="EXPLORE">
+            <span class="profile-name">JAIN UNIVERSITY KOCHI</span>
+            <span class="profile-sub">First Year Student</span>
+          </div>
+          <div class="profile reveal" data-cursor="EXPLORE">
+            <span class="profile-name">BASED IN</span>
+            <span class="profile-sub">Kalady, Ernakulam, Kerala, India</span>
+          </div>
+          <div class="profile reveal" data-cursor="EXPLORE">
+            <span class="profile-name">FOCUS</span>
+            <span class="profile-sub">Web • Mobile • AI • Product Ideas • Problem Solving</span>
+          </div>
+          <div class="currently reveal" data-cursor="EXPLORE">
+            <span class="currently-label">CURRENTLY</span>
+            <ul class="currently-list">
+              <li><span class="c-k">Learning</span><span class="c-v">Full Stack Development</span></li>
+              <li><span class="c-k">Exploring</span><span class="c-v">AI Integration &amp; Product Development</span></li>
+              <li><span class="c-k">Building</span><span class="c-v">Websites, Apps, Games &amp; Experiments</span></li>
+              <li><span class="c-k">Thinking About</span><span class="c-v">Startup Ideas &amp; Real-World Problems</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I BUILD ============ -->
+  <section class="build section" id="build">
+    <div class="container">
+      <p class="section-label reveal">02 — CRAFT</p>
+      <h2 class="build-statement reveal">I LIKE BUILDING THINGS THAT START AS IDEAS.</h2>
+      <div class="build-cats">
+        <span class="cat reveal" data-cursor="EXPLORE">WEB</span>
+        <span class="cat reveal" data-cursor="EXPLORE">MOBILE</span>
+        <span class="cat reveal" data-cursor="EXPLORE">AI</span>
+        <span class="cat reveal" data-cursor="EXPLORE">GAMES</span>
+        <span class="cat reveal" data-cursor="EXPLORE">TOOLS</span>
+        <span class="cat reveal" data-cursor="EXPLORE">STARTUP IDEAS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT UNIVERSE ============ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <p class="section-label reveal">03 — WORK</p>
+      <h2 class="section-title reveal">PROJECT UNIVERSE</h2>
+      <p class="section-intro reveal">Experiments, prototypes, and concepts I'm building while learning. Some are early ideas — all are works in progress.</p>
+
+      <div class="project-list">
+
+        <!-- Project 1 -->
+        <article class="project reveal" data-cursor="VIEW">
+          <div class="project-visual v-pathfinder"><span class="pv-orb"></span><span class="pv-ring"></span></div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-index">01</span><span class="project-cat">EDUCATION • PLATFORM</span></div>
+            <h3 class="project-name">Pathfinder AI</h3>
+            <p class="project-desc">An education and career discovery platform concept designed to help students understand courses, colleges, skills, careers, and possible future paths after Plus Two.</p>
+            <div class="project-foot">
+              <span class="chip">Concept</span>
+              <span class="chip">AI Discovery</span>
+              <span class="status">STATUS · EXPERIMENT</span>
+            </div>
+            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project alt reveal" data-cursor="VIEW">
+          <div class="project-visual v-friendlink"><span class="pv-orb"></span><span class="pv-ring"></span></div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-index">02</span><span class="project-cat">MOBILE • FLUTTER</span></div>
+            <h3 class="project-name">FriendLink</h3>
+            <p class="project-desc">A mobile application concept focused on connecting people and social interaction, developed as a Flutter project.</p>
+            <div class="project-foot">
+              <span class="chip">Prototype</span>
+              <span class="chip">Flutter</span>
+              <span class="status">STATUS · IN PROGRESS</span>
+            </div>
+            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project reveal" data-cursor="VIEW">
+          <div class="project-visual v-smartdata"><span class="pv-orb"></span><span class="pv-ring"></span></div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-index">03</span><span class="project-cat">AI • UTILITY</span></div>
+            <h3 class="project-name">SmartData AI</h3>
+            <p class="project-desc">An AI-powered internet/data usage management concept designed around smarter data consumption and useful recommendations.</p>
+            <div class="project-foot">
+              <span class="chip">Concept</span>
+              <span class="chip">AI Assistant</span>
+              <span class="status">STATUS · IDEA</span>
+            </div>
+            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project alt reveal" data-cursor="VIEW">
+          <div class="project-visual v-iq"><span class="pv-orb"></span><span class="pv-ring"></span></div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-index">04</span><span class="project-cat">WEB • GAME</span></div>
+            <h3 class="project-name">IQ Arena</h3>
+            <p class="project-desc">An interactive web-based intelligence / puzzle game concept focused on thinking, reaction, reasoning, and engaging challenges.</p>
+            <div class="project-foot">
+              <span class="chip">Prototype</span>
+              <span class="chip">Web Game</span>
+              <span class="status">STATUS · EXPERIMENT</span>
+            </div>
+            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project reveal" data-cursor="VIEW">
+          <div class="project-visual v-boxer"><span class="pv-orb"></span><span class="pv-ring"></span></div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-index">05</span><span class="project-cat">BROWSER • GAME</span></div>
+            <h3 class="project-name">Boxer Reflex Arena</h3>
+            <p class="project-desc">A browser-based reflex / reaction game concept using interactive gameplay mechanics.</p>
+            <div class="project-foot">
+              <span class="chip">Concept</span>
+              <span class="chip">Reflex Game</span>
+              <span class="status">STATUS · IDEA</span>
+            </div>
+            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project alt reveal" data-cursor="VIEW">
+          <div class="project-visual v-spider"><span class="pv-orb"></span><span class="pv-ring"></span></div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-index">06</span><span class="project-cat">2D • GAME</span></div>
+            <h3 class="project-name">Spider-Man Runner</h3>
+            <p class="project-desc">A simple 2D runner game concept exploring browser game development and interactive gameplay.</p>
+            <div class="project-foot">
+              <span class="chip">Prototype</span>
+              <span class="chip">2D Runner</span>
+              <span class="status">STATUS · EXPERIMENT</span>
+            </div>
+            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+          </div>
+        </article>
+
+        <!-- Project 7 -->
+        <article class="project reveal" data-cursor="VIEW">
+          <div class="project-visual v-tuition"><span class="pv-orb"></span><span class="pv-ring"></span></div>
+          <div class="project-info">
+            <div class="project-meta"><span class="project-index">07</span><span class="project-cat">PRODUCTIVITY • EDU</span></div>
+            <h3 class="project-name">Tuition Assistant</h3>
+            <p class="project-desc">A productivity / education assistant concept designed to help manage and support tuition-related activities.</p>
+            <div class="project-foot">
+              <span class="chip">Concept</span>
+              <span class="chip">Assistant</span>
+              <span class="status">STATUS · IDEA</span>
+            </div>
+            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CURRENT FOCUS ============ -->
+  <section class="focus section" id="focus">
+    <div class="container">
+      <p class="section-label reveal">04 — NOW</p>
+      <h2 class="section-title reveal">WHAT I'M LEARNING &amp; BUILDING NOW</h2>
+      <div class="focus-grid">
+        <div class="focus-item reveal"><span class="focus-no">01</span><h4>Full Stack Development</h4><p>Front-end to back-end fundamentals.</p></div>
+        <div class="focus-item reveal"><span class="focus-no">02</span><h4>AI Integration</h4><p>Using AI-assisted development.</p></div>
+        <div class="focus-item reveal"><span class="focus-no">03</span><h4>Web Applications</h4><p>Building interactive products.</p></div>
+        <div class="focus-item reveal"><span class="focus-no">04</span><h4>Mobile Applications</h4><p>Flutter &amp; cross-platform ideas.</p></div>
+        <div class="focus-item reveal"><span class="focus-no">05</span><h4>UI / UX</h4><p>Design that feels intentional.</p></div>
+        <div class="focus-item reveal"><span class="focus-no">06</span><h4>Rapid Prototyping</h4><p>Turning ideas into demos fast.</p></div>
+        <div class="focus-item reveal"><span class="focus-no">07</span><h4>Game Development</h4><p>Browser &amp; 2D interactive play.</p></div>
+        <div class="focus-item reveal"><span class="focus-no">08</span><h4>Product Development</h4><p>Shaping concepts into products.</p></div>
+        <div class="focus-item reveal"><span class="focus-no">09</span><h4>Startup Thinking</h4><p>Small starts, real outcomes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MY WAY OF BUILDING ============ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <p class="section-label reveal">05 — JOURNEY</p>
+      <h2 class="section-title reveal">MY WAY OF BUILDING</h2>
+      <div class="process-flow">
+        <div class="step reveal"><span class="step-no">01</span><h4>IDEA</h4></div>
+        <i class="flow-arrow reveal">↓</i>
+        <div class="step reveal"><span class="step-no">02</span><h4>EXPLORE</h4></div>
+        <i class="flow-arrow reveal">↓</i>
+        <div class="step reveal"><span class="step-no">03</span><h4>PROTOTYPE</h4></div>
+        <i class="flow-arrow reveal">↓</i>
+        <div class="step reveal"><span class="step-no">04</span><h4>BUILD</h4></div>
+        <i class="flow-arrow reveal">↓</i>
+        <div class="step reveal"><span class="step-no">05</span><h4>TEST</h4></div>
+        <i class="flow-arrow reveal">↓</i>
+        <div class="step reveal"><span class="step-no">06</span><h4>IMPROVE</h4></div>
+        <i class="flow-arrow reveal">↓</i>
+        <div class="step reveal"><span class="step-no">07</span><h4>LAUNCH</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IDEA LAB ============ -->
+  <section class="ideas section" id="ideas">
+    <div class="container">
+      <p class="section-label reveal">06 — IDEA LAB</p>
+      <h2 class="section-title reveal">IDEAS I'D LIKE TO BUILD</h2>
+      <p class="section-intro reveal">Some ideas are projects. Some are experiments. Some may become startups. This space is where future concepts live.</p>
+      <div class="idea-grid">
+        <div class="idea-card reveal" data-cursor="EXPLORE"><h4>Education Technology</h4><p>Tools that make learning clearer.</p></div>
+        <div class="idea-card reveal" data-cursor="EXPLORE"><h4>AI Tools</h4><p>Small helpers that do real work.</p></div>
+        <div class="idea-card reveal" data-cursor="EXPLORE"><h4>Student Utilities</h4><p>Everyday problems, simple fixes.</p></div>
+        <div class="idea-card reveal" data-cursor="EXPLORE"><h4>Productivity Apps</h4><p>Focus, plan, and finish.</p></div>
+        <div class="idea-card reveal" data-cursor="EXPLORE"><h4>Creative Web Experiences</h4><p>Interactive, playful, memorable.</p></div>
+        <div class="idea-card reveal" data-cursor="EXPLORE"><h4>Mobile Applications</h4><p>Ideas that fit in a pocket.</p></div>
+        <div class="idea-card reveal" data-cursor="EXPLORE"><h4>Games</h4><p>Fun mechanics worth exploring.</p></div>
+        <div class="idea-card reveal" data-cursor="EXPLORE"><h4>Future Startup Concepts</h4><p>Concepts with room to grow.</p></div>
+        <div class="idea-card idea-add reveal" data-cursor="EXPLORE"><h4>+ Future Experiments</h4><p>New ideas added as I learn &amp; build.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLLABORATION ============ -->
+  <section class="collab section" id="collab">
+    <div class="container collab-inner">
+      <p class="section-label reveal">07 — COLLABORATE</p>
+      <h2 class="collab-headline reveal">HAVE AN IDEA?<br/>LET'S BUILD IT.</h2>
+      <p class="collab-text reveal">Have a website idea, app concept, college project, startup idea, or a problem worth solving? Bring the idea. We can explore it, prototype it, learn from it, and build something together.</p>
+      <div class="collab-stack reveal">
+        <p>START WITH AN IDEA.</p>
+        <p>USE WHAT WE HAVE.</p>
+        <p>BUILD SOMETHING REAL.</p>
+      </div>
+      <p class="collab-note reveal">Great ideas do not always need a large budget to begin. Start small, learn fast, build together, and grow from there.</p>
+      <a class="btn btn-primary btn-lg reveal" href="mailto:hello@akhiljojo.dev" data-cursor="BUILD">START A PROJECT</a>
+    </div>
+  </section>
+
+  <!-- ============ GITHUB / OPEN WORK ============ -->
+  <section class="github section" id="github">
+    <div class="container github-inner">
+      <div class="github-left">
+        <p class="section-label reveal">08 — OPEN</p>
+        <h2 class="section-title reveal">OPEN WORK</h2>
+        <p class="section-intro reveal">A collection of projects, experiments, prototypes, code, and things I'm learning while building.</p>
+        <a class="btn btn-ghost reveal" href="https://github.com" target="_blank" rel="noopener" data-cursor="OPEN">VIEW GITHUB ↗</a>
+      </div>
+      <div class="github-visual reveal" aria-hidden="true">
+        <div class="gh-window">
+          <div class="gh-bar"><span></span><span></span><span></span></div>
+          <div class="gh-body">
+            <div class="gh-line"><i></i><em>akhil-jojo / pathfinder-ai</em></div>
+            <div class="gh-line"><i></i><em>akhil-jojo / friendlink</em></div>
+            <div class="gh-line"><i></i><em>akhil-jojo / iq-arena</em></div>
+            <div class="gh-line"><i></i><em>akhil-jojo / experiments</em></div>
+            <div class="gh-line"><i></i><em>akhil-jojo / portfolio-v1</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FUTURE ============ -->
+  <section class="future section" id="future">
+    <div class="container">
+      <p class="section-label reveal">09 — AHEAD</p>
+      <h2 class="section-title reveal">WHERE I'M HEADING</h2>
+      <div class="future-grid">
+        <div class="future-item reveal"><h3>BUILD BETTER</h3></div>
+        <div class="future-item reveal"><h3>LEARN FASTER</h3></div>
+        <div class="future-item reveal"><h3>SOLVE REAL PROBLEMS</h3></div>
+        <div class="future-item reveal"><h3>CREATE PRODUCTS</h3></div>
+        <div class="future-item reveal"><h3>WORK WITH GREAT PEOPLE</h3></div>
+        <div class="future-item reveal"><h3>BUILD STARTUPS</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final section" id="final">
+    <div class="container final-inner">
+      <h2 class="final-text reveal">LET'S BUILD SOMETHING INTERESTING.</h2>
+      <div class="final-sign reveal">
+        <p class="final-name">AKHIL JOJO</p>
+        <p class="final-sub">BCA • FULL STACK AI DEVELOPMENT</p>
+      </div>
+      <div class="final-actions reveal">
+        <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noopener" data-cursor="OPEN">GITHUB</a>
+        <a class="btn btn-ghost" href="mailto:hello@akhiljojo.dev" data-cursor="BUILD">CONTACT</a>
+        <a class="btn btn-ghost" href="#projects" data-cursor="VIEW">PROJECTS</a>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <span>© <span id="year"></span> AKHIL JOJO</span>
+      <span>BUILT WITH CURIOSITY · KOCHI, KERALA</span>
+    </footer>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

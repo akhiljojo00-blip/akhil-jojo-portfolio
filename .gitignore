@@ -1,0 +1,11 @@
+# Cloudflare tunnel binary (not part of the project)
+cloudflared
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Workspace / cache
+.arena/
+node_modules/
