@@ -159,6 +159,24 @@
   const yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
 
+  /* ---------- PHONE REVEAL ---------- */
+  const phoneReveal = document.getElementById("phoneReveal");
+  const phoneNumber = document.getElementById("phoneNumber");
+  if (phoneReveal && phoneNumber) {
+    phoneReveal.addEventListener("click", () => {
+      const hidden = phoneNumber.hasAttribute("hidden");
+      if (hidden) {
+        phoneNumber.removeAttribute("hidden");
+        phoneReveal.textContent = "Hide phone number";
+        phoneReveal.setAttribute("aria-expanded", "true");
+      } else {
+        phoneNumber.setAttribute("hidden", "");
+        phoneReveal.textContent = "Show phone number";
+        phoneReveal.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   /* ---------- BACKGROUND CANVAS ---------- */
   const canvas = document.getElementById("bgCanvas");
   const ctx = canvas.getContext("2d");
