@@ -192,7 +192,7 @@
       const btn = ideaForm.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.textContent = "SENDING…";
-      fetch("https://formsubmit.co/ajax/hello@akhiljojo.dev", {
+      fetch("https://formsubmit.co/ajax/akhiljojo00@gmail.com", {
         method: "POST",
         body: new FormData(ideaForm),
         headers: { "Accept": "application/json" }
