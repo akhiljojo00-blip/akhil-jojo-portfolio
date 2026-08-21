@@ -358,6 +358,38 @@
         </span>
       </div>
       <a class="btn btn-primary btn-lg reveal" href="mailto:hello@akhiljojo.dev" data-cursor="BUILD">START A PROJECT</a>
+
+      <div class="share-idea reveal" id="shareIdea">
+        <p class="share-eyebrow">SHARE YOUR IDEA</p>
+        <h3 class="share-title">Got an idea? Send it over.</h3>
+        <form class="idea-form" id="ideaForm" action="https://formsubmit.co/hello@akhiljojo.dev" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Startup Idea from Portfolio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" id="nextUrl" value="#">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="Name" type="text" required placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="Email" type="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="field full">
+            <label for="f-title">Idea / Project Title</label>
+            <input id="f-title" name="Idea Title" type="text" required placeholder="A short title for your idea">
+          </div>
+          <div class="field full">
+            <label for="f-desc">Describe Your Idea</label>
+            <textarea id="f-desc" name="Describe Your Idea" rows="4" required placeholder="Tell me about the idea, the problem, or what you'd like to build."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" data-cursor="BUILD">SUBMIT IDEA →</button>
+        </form>
+        <div class="idea-success" id="ideaSuccess" hidden>
+          <p class="success-mark">IDEA RECEIVED ✓</p>
+          <p class="success-sub">Thanks for sharing your idea.</p>
+        </div>
+      </div>
     </div>
   </section>
 

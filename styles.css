@@ -318,6 +318,24 @@ body.cursor-on a,body.cursor-on button{cursor:none}
 .cc-phone:hover{color:var(--accent)}
 .cc-phone[hidden]{display:none}
 
+/* SHARE YOUR IDEA */
+.share-idea{margin:3.4rem auto 0;max-width:640px;padding:clamp(1.8rem,4vw,3rem);border:1px solid var(--line);border-radius:18px;background:var(--surface);text-align:left}
+.share-eyebrow{font-size:.68rem;letter-spacing:.3em;color:var(--accent);margin-bottom:1rem;text-transform:uppercase;font-weight:500}
+.share-title{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(1.4rem,3vw,2rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1.8rem}
+.idea-form{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.2rem}
+.field{display:flex;flex-direction:column;gap:.5rem}
+.field.full{grid-column:1 / -1}
+.field label{font-size:.66rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.field input,.field textarea{font-family:inherit;font-size:.95rem;color:var(--text);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:.8rem .9rem;transition:border-color .35s var(--ease),box-shadow .35s var(--ease)}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:.7}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
+.field textarea{resize:vertical;min-height:110px}
+.idea-form .btn{grid-column:1 / -1;justify-self:start;margin-top:.4rem}
+.idea-success{text-align:center;padding:1rem 0}
+.success-mark{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(1.4rem,3vw,2rem);color:var(--accent);letter-spacing:.02em}
+.success-sub{margin-top:.7rem;color:var(--muted)}
+@media (max-width:560px){.idea-form{grid-template-columns:1fr}.field.full{grid-column:auto}}
+
 /* ---------- GITHUB ---------- */
 .github-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .github-visual{perspective:1000px}

@@ -177,6 +177,42 @@
     });
   }
 
+  /* ---------- SHARE YOUR IDEA FORM ---------- */
+  const ideaForm = document.getElementById("ideaForm");
+  const ideaSuccess = document.getElementById("ideaSuccess");
+  if (ideaForm && ideaSuccess) {
+    const nextInput = ideaForm.querySelector('input[name="_next"]');
+    if (nextInput) nextInput.value = location.href.split("?")[0] + "?sent=1";
+    if (new URLSearchParams(location.search).get("sent") === "1") {
+      ideaForm.hidden = true;
+      ideaSuccess.hidden = false;
+    }
+    ideaForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const btn = ideaForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = "SENDING…";
+      fetch("https://formsubmit.co/ajax/hello@akhiljojo.dev", {
+        method: "POST",
+        body: new FormData(ideaForm),
+        headers: { "Accept": "application/json" }
+      })
+        .then((r) => r.json())
+        .then((d) => {
+          if (d.success) {
+            ideaForm.hidden = true;
+            ideaSuccess.hidden = false;
+            history.replaceState(null, "", location.pathname);
+          } else {
+            throw new Error("submit-failed");
+          }
+        })
+        .catch(() => {
+          ideaForm.submit();
+        });
+    });
+  }
+
   /* ---------- BACKGROUND CANVAS ---------- */
   const canvas = document.getElementById("bgCanvas");
   const ctx = canvas.getContext("2d");
