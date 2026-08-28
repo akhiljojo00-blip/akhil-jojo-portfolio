@@ -38,12 +38,12 @@
   <a class="nav-brand" href="#hero" data-cursor="HOME">AJ<span>.</span></a>
 
   <div class="nav-links" id="navLinks">
-    <a href="#hero" class="nav-link">HOME</a>
+    <a href="#work" class="nav-link">WORK</a>
+    <a href="#skills" class="nav-link">SKILLS</a>
+    <a href="#learn" class="nav-link">LEARN</a>
+    <a href="#services" class="nav-link">SERVICES</a>
     <a href="#about" class="nav-link">ABOUT</a>
-    <a href="#projects" class="nav-link">WORK</a>
-    <a href="#ideas" class="nav-link">IDEAS</a>
-    <a href="#process" class="nav-link">JOURNEY</a>
-    <a href="#collab" class="nav-link">CONTACT</a>
+    <a href="#contact" class="nav-link">CONTACT</a>
   </div>
 
   <div class="nav-actions">
@@ -85,8 +85,8 @@
       <p class="hero-statement reveal">I build ideas, experiments, websites, apps, and digital products while learning how technology can solve real problems.</p>
       <p class="hero-loc reveal">KALADY • ERNAKULAM • KERALA</p>
       <div class="hero-actions reveal">
-        <a class="btn btn-primary" href="#projects" data-cursor="VIEW">EXPLORE MY WORK</a>
-        <a class="btn btn-ghost" href="#collab" data-cursor="BUILD">LET'S BUILD TOGETHER</a>
+        <a class="btn btn-primary" href="#work" data-cursor="VIEW">EXPLORE MY WORK</a>
+        <a class="btn btn-ghost" href="#contact" data-cursor="BUILD">LET'S BUILD TOGETHER</a>
       </div>
     </div>
     <div class="hero-scroll reveal" aria-hidden="true">
@@ -151,14 +151,75 @@
     </div>
   </section>
 
-  <!-- ============ PROJECT UNIVERSE ============ -->
-  <section class="projects section" id="projects">
+  <!-- ============ WORK / PROJECT UNIVERSE ============ -->
+  <section class="projects section" id="work">
     <div class="container">
       <p class="section-label reveal">03 — WORK</p>
       <h2 class="section-title reveal">PROJECT UNIVERSE</h2>
-      <p class="section-intro reveal">Experiments, prototypes, and concepts I'm building while learning. Some are early ideas — all are works in progress.</p>
+      <p class="section-intro reveal">Flagship platforms, experiments, prototypes, and concepts I'm building while learning.</p>
 
       <div class="project-list">
+
+        <!-- Flagship Project: TrackMate -->
+        <article class="project project-flagship reveal" data-cursor="VIEW">
+          <div class="project-visual v-trackmate">
+            <div class="tm-radar">
+              <div class="tm-ring tm-ring-1"></div>
+              <div class="tm-ring tm-ring-2"></div>
+              <div class="tm-ring tm-ring-3"></div>
+              <div class="tm-sweep"></div>
+              <div class="tm-node tm-node-center"></div>
+              <div class="tm-node tm-node-p1"></div>
+              <div class="tm-node tm-node-p2"></div>
+              <div class="tm-beacon"></div>
+            </div>
+            <div class="tm-telemetry-overlay">
+              <span class="tm-pill">LIVE TELEMETRY</span>
+              <span class="tm-pill tm-pill-cyan">ENCRYPTED P2P</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="flagship-badge">FLAGSHIP PROJECT</span>
+              <span class="project-index">00</span>
+              <span class="project-cat">MOBILE • GEOSPATIAL TELEMETRY</span>
+            </div>
+            <h3 class="project-name">TrackMate</h3>
+            <p class="project-tagline">Consent-Based Live Telemetry &amp; Secure Geospatial Networking</p>
+            <p class="project-desc">A privacy-first Flutter Android application for realtime communication, consent-based location sharing, group collaboration, emergency safety features, and geospatial tools.</p>
+            
+            <div class="flagship-principles">
+              <span class="principles-header">CORE PRIVACY ARCHITECTURE</span>
+              <ul class="principles-list">
+                <li><span class="p-rule"><strong>Connection ≠ Location Permission</strong></span></li>
+                <li><span class="p-rule"><strong>Group Membership ≠ Location Permission</strong></span></li>
+                <li><span class="p-rule"><strong>Location Sharing:</strong> <em>Explicit · Directional · Revocable</em></span></li>
+              </ul>
+            </div>
+
+            <div class="flagship-metrics">
+              <span class="metric-pill"><i class="metric-dot"></i> Automated Tests Passing</span>
+              <span class="metric-pill"><i class="metric-dot"></i> Static Analyzer Verified</span>
+              <span class="metric-pill"><i class="metric-dot"></i> Android Device Verified</span>
+              <span class="metric-pill"><i class="metric-dot"></i> Live Telemetry &amp; SOS</span>
+            </div>
+
+            <div class="project-foot">
+              <span class="chip">Flutter</span>
+              <span class="chip">Dart</span>
+              <span class="chip">Firebase Auth</span>
+              <span class="chip">Realtime Database</span>
+              <span class="chip">Cloud Messaging</span>
+              <span class="chip">OpenStreetMap</span>
+              <span class="chip">flutter_map</span>
+              <span class="status">STATUS · ACTIVE / FLAGSHIP</span>
+            </div>
+            <div class="flagship-actions">
+              <a class="btn btn-primary" href="#contact" data-cursor="VIEW">VIEW PROJECT</a>
+              <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noopener" data-cursor="OPEN">GITHUB ↗</a>
+            </div>
+          </div>
+        </article>
 
         <!-- Project 1 -->
         <article class="project reveal" data-cursor="VIEW">
@@ -172,7 +233,7 @@
               <span class="chip">AI Discovery</span>
               <span class="status">STATUS · EXPERIMENT</span>
             </div>
-            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+            <a class="project-link" href="#contact" data-cursor="VIEW">EXPLORE →</a>
           </div>
         </article>
 
@@ -188,7 +249,7 @@
               <span class="chip">Flutter</span>
               <span class="status">STATUS · IN PROGRESS</span>
             </div>
-            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+            <a class="project-link" href="#contact" data-cursor="VIEW">EXPLORE →</a>
           </div>
         </article>
 
@@ -204,7 +265,7 @@
               <span class="chip">AI Assistant</span>
               <span class="status">STATUS · IDEA</span>
             </div>
-            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+            <a class="project-link" href="#contact" data-cursor="VIEW">EXPLORE →</a>
           </div>
         </article>
 
@@ -220,7 +281,7 @@
               <span class="chip">Web Game</span>
               <span class="status">STATUS · EXPERIMENT</span>
             </div>
-            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+            <a class="project-link" href="#contact" data-cursor="VIEW">EXPLORE →</a>
           </div>
         </article>
 
@@ -236,7 +297,7 @@
               <span class="chip">Reflex Game</span>
               <span class="status">STATUS · IDEA</span>
             </div>
-            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+            <a class="project-link" href="#contact" data-cursor="VIEW">EXPLORE →</a>
           </div>
         </article>
 
@@ -252,7 +313,7 @@
               <span class="chip">2D Runner</span>
               <span class="status">STATUS · EXPERIMENT</span>
             </div>
-            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+            <a class="project-link" href="#contact" data-cursor="VIEW">EXPLORE →</a>
           </div>
         </article>
 
@@ -268,7 +329,7 @@
               <span class="chip">Assistant</span>
               <span class="status">STATUS · IDEA</span>
             </div>
-            <a class="project-link" href="#collab" data-cursor="VIEW">EXPLORE →</a>
+            <a class="project-link" href="#contact" data-cursor="VIEW">EXPLORE →</a>
           </div>
         </article>
 
@@ -338,10 +399,10 @@
     </div>
   </section>
 
-  <!-- ============ COLLABORATION ============ -->
-  <section class="collab section" id="collab">
+  <!-- ============ COLLABORATION / CONTACT ============ -->
+  <section class="collab section" id="contact">
     <div class="container collab-inner">
-      <p class="section-label reveal">07 — COLLABORATE</p>
+      <p class="section-label reveal">07 — CONTACT</p>
       <h2 class="collab-headline reveal">HAVE AN IDEA?<br/>LET'S BUILD IT.</h2>
       <p class="collab-text reveal">Have a website idea, app concept, college project, startup idea, or a problem worth solving? Bring the idea. We can explore it, prototype it, learn from it, and build something together.</p>
       <div class="collab-stack reveal">
@@ -406,11 +467,12 @@
         <div class="gh-window">
           <div class="gh-bar"><span></span><span></span><span></span></div>
           <div class="gh-body">
+            <div class="gh-line"><i></i><em>akhil-jojo / trackmate</em></div>
             <div class="gh-line"><i></i><em>akhil-jojo / pathfinder-ai</em></div>
             <div class="gh-line"><i></i><em>akhil-jojo / friendlink</em></div>
             <div class="gh-line"><i></i><em>akhil-jojo / iq-arena</em></div>
             <div class="gh-line"><i></i><em>akhil-jojo / experiments</em></div>
-            <div class="gh-line"><i></i><em>akhil-jojo / portfolio-v1</em></div>
+            <div class="gh-line"><i></i><em>akhil-jojo / portfolio-v2</em></div>
           </div>
         </div>
       </div>
@@ -443,8 +505,8 @@
       </div>
       <div class="final-actions reveal">
         <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noopener" data-cursor="OPEN">GITHUB</a>
-        <a class="btn btn-ghost" href="mailto:akhiljojo00@gmail.com" data-cursor="BUILD">CONTACT</a>
-        <a class="btn btn-ghost" href="#projects" data-cursor="VIEW">PROJECTS</a>
+        <a class="btn btn-ghost" href="#contact" data-cursor="BUILD">CONTACT</a>
+        <a class="btn btn-ghost" href="#work" data-cursor="VIEW">PROJECTS</a>
       </div>
     </div>
     <footer class="site-footer">
